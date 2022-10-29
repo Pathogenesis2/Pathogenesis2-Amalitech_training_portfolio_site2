@@ -1,0 +1,93 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	
+	font-family: 'Atkinson Hyperlegible', sans-serif;
+	color: #7191A5;
+	font-size: 18px;
+}
+h1{
+	font-size: 48px;
+}
+h2{
+	font-size: 32px;
+}
+h3{
+	font-size: 20px;
+}
+a{
+	text-decoration: none;
+}
+#container{
+	width: 1110px;
+	height: 887px;
+	margin: auto;
+	background-color: #F2F2F2;
+}
+nav{
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+}
+#navg{
+	width: 300px;
+	display: flex;
+	justify-content: space-between;
+	float: right;
+}
+#but1{
+	width: 127px;
+	height: 52px;
+	background-color: #FDA214;
+	color: #FCFCFC;
+	text-align: center;
+	border-radius: 26px;
+}
+#but2{
+	width: 149px;
+	height: 52px;
+	background-color: #DFE7EC;
+	color: #304859;
+	text-align: center;
+	border-radius: 26px;
+}
+#but1 h3, #but2 h3{
+	margin: auto;
+	position: relative;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
+svg{
+	position: relative;
+	top: 50%;
+	transform: translate(0%,50%);
+}
+.ball_element{
+	width: 118px;
+	height: 118px;
+	background-color: #304859;
+	border-radius: 50%;
+}
+#balls{
+	margin: auto;
+	width: 532px;
+	height: 532px;
+	display: grid;
+	grid-template-columns: repeat(4, 25%);
+	grid-template-rows: repeat(4, 25%);
+}
+#footers{
+	width: 532px;
+	margin: auto;
+	display: flex;
+	justify-content: space-between;
+}
+#time, #moves{
+	width: 225px;
+	height: 72px;
+	background-color: #DFE7EC;
+	text-align: center;
+}

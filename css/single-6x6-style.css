@@ -1,12 +1,14 @@
 *{
-	margin: 0;
-	padding: 0;
+	margin: 0 0;
+	padding: 0 0;
 }
-body{	
+body{
+	
 	font-family: 'Atkinson Hyperlegible', sans-serif;
 	color: #7191A5;
 	background-color: #f2f2f2;
 	font-size: 1.3vw;
+	text-align: center;
 }
 h1{
 	font-size: 48px;
@@ -31,17 +33,18 @@ a{
 	transform: translate(-50%,-50%);
 }
 #container{
-	width: 77.1vw;
-	margin: auto;
+	width: 77vw;
+	margin: auto ;
 	position: relative;
-
 }
 nav{
 	position: relative;
+	margin-bottom: 2.2vw;
 	margin: auto;
 	width: 100%;
 	display: flex;
 	justify-content: space-between;
+	bottom: 50%
 }
 #navg{
 	width: 26%;
@@ -51,7 +54,7 @@ nav{
 }
 #but1{
 	width: 8.8vw;
-	height: 3.6vw;
+	height: 2.5vw;
 	background-color: #FDA214;
 	color: #FCFCFC;
 	text-align: center;
@@ -63,7 +66,7 @@ nav{
 }
 #but2{
 	width: 10.4vw;
-	height: 3.6vw;
+	height: 2.5vw;
 	background-color: #DFE7EC;
 	color: #304859;
 	text-align: center;
@@ -79,11 +82,10 @@ nav{
 }
 svg{
 	position: relative;
-	top: 6px
 }
 .ball_element{
-	width: 7.2vw;
-	height: 7.2vw;
+	width: 4.4vw;
+	height: 4.4vw;
 	background-color: #304859;
 	border-radius: 50%;
 	margin: auto auto;
@@ -93,25 +95,24 @@ svg{
 	position: relative;
 	text-align: center;
 	margin: auto;
-	width: 32.9vw;
-	height: 32.9vw;
+	margin-bottom: 4vw;
+	width: 31.3vw;
+	height: 31.3vw;
 	display: grid;
-	margin-top: 1.5vw;
-	margin-bottom: 1.5vw;
-	grid-template-columns: repeat(4, 25%);
-	grid-template-rows: repeat(4, 25%);
+	margin-top: 3vw;
+	grid-template-columns: repeat(6, 16.67%);
+	grid-template-rows: repeat(6, 16.67%);
 }
 #footers{
 	position: relative;
-	margin-top: 5vw;
-	width: 36.9vw;
+	width: 31.3vw;
 	margin: auto;
 	display: flex;
 	justify-content: space-between;
 }
 #time, #moves{
-	width: 17.7vw;
-	height: 5vw;
+	width: 14vw;
+	height: 3vw;
 	background-color: #DFE7EC;
 	text-align: center;
 	border-radius: 10px;
@@ -125,13 +126,13 @@ svg{
 	display: inline-block;
 	top:50%;
 	color: #304859;
-	transform: translateY(-25%);
+	transform: translateY(-45%);
 }
 #txt{
 	position: relative;
 	height: 100%;
 	top:50%;
-	transform: translateY(-16%);
+	transform: translateY(-32%);
 }
 #minutes{
 	float: left;
@@ -140,7 +141,7 @@ svg{
 	display: none;
 }
 
-@media only screen and (max-device-width: 480px)and (min-device-width: 260px){
+@media only screen and (max-device-width: 480px) and (min-device-width: 260px){
 	body{
 		font-size: 4vw;
 	}
@@ -152,12 +153,12 @@ svg{
 	}
 	#container{
 		width: 87.2vw;
-		height: 90%;
-		margin: 0 0;
+		margin: 0 0;	
 	}
 	nav{
 		width: 87.2vw;
-		margin-bottom: 6.2vw;
+		margin-bottom: 22vw;
+
 	}
 	#menu{
 		width: 16.3vw;
@@ -180,23 +181,23 @@ svg{
 	top: 0.5vw;
 	}
 	.ball_element{
-		width: 18vw;
-		height: 18vw;
+		width: 12.5vw;
+		height: 12.5vw;
+	
 	}
 	#balls{
 		position: relative;
 		margin: auto;
-		margin-top: 20vw;
-		margin-bottom: 20vw;
 		width: 87.2vw;
 		height:	87.2vw;
 		display: grid;
-		grid-template-columns: repeat(4, 25%);
-		grid-template-rows: repeat(4, 25%);
+		grid-template-columns: repeat(6, 16.67%);
+		grid-template-rows: repeat(6, 16.67%);
 	}
 	#footers{
 		position: relative;
-		width: 87.2vw;
+		margin-top: 25vw;
+		width:87.2vw;
 	}
 	#time, #moves{
 		width: 40.3vw;
@@ -229,7 +230,7 @@ svg{
 		font-size: 2.6vw;
 	}
 	h3{
-		font-size: 2.5vw;
+		font-size: 2.6vw;
 	}
 	#container{
 		width: 89.7vw;
@@ -256,33 +257,28 @@ svg{
 		top: 0.7vw
 	}
 	.ball_element{
-		width: 20vw;
-		height: 20vw;
+		width: 10.7vw;
+		height: 10.7vw;
 	
 	}
 	#balls{
-		width: 100%;
-		height: 89.7vw;
-		margin-top: 10vw;
-		margin-bottom: 10vw;
+		width: 74.5vw;
+		height: 74.5vw;
+		margin-top: 15vw
 	}
 	#footers{
-		width: 100%;
-		
+		margin-top: 20vw;
+		width: 74.5vw;
 	}
 	#time, #moves{
-		position: relative;
-		width: 40vw;
+		width: 35vw;
 		height: 10vw;
-
 	}
-	.display{	
-		height: 100%;
-		font-size: 4vw;
+	.display{
+		font-size: 4.2vw;
 		transform: translateY(-28%);
 	}
 	#txt{
-		height: 100%;
 		transform: translateY(-20%);
 	}
 }

@@ -104,12 +104,12 @@ svg{
 #footers{
 	position: relative;
 	margin-top: 5vw;
-	width: 36.9vw;
+	width: 100%;
 	margin: auto;
 	display: flex;
 	justify-content: space-between;
 }
-#time, #moves{
+.players{
 	width: 17.7vw;
 	height: 5vw;
 	background-color: #DFE7EC;
@@ -118,20 +118,18 @@ svg{
 	display: flex;
 	justify-content: space-around;
 }
-.display{
+.scores{
 	position: relative;
+    margin: 0 0;
+    padding: 0 0;
 	height: 100%;
 	font-size: 2vw;
-	display: inline-block;
-	top:50%;
+	top:22%;
 	color: #304859;
-	transform: translateY(-25%);
-}
-#txt{
 	position: relative;
-	height: 100%;
-	top:50%;
-	transform: translateY(-16%);
+}
+.playerName{
+    margin-top: 9%
 }
 #minutes{
 	float: left;
@@ -196,37 +194,73 @@ svg{
 	}
 	#footers{
 		position: relative;
-		width: 87.2vw;
-	}
-	#time, #moves{
-		width: 40.3vw;
-		height: 18.7vw;
-		display:block;
-		border-radius: 5px;
-		display: grid;
-		grid-template-rows: (2, 50%);
-		justify-content: space-around;
-		box-sizing: border-box;
+		width: 100%
 	}
 	
-	.display{
+    .players{
+        flex-direction: column;
+        justify-content: center;
+        height: 20vw;
+    }
+	.playerName{
+        position: relative;
+        margin-left: 6.5vw;
+        top: 2vw;
+    }
+	.scores{
 		position: relative;
-		height: 100%;
 		font-size: 6.4vw;
-		top: 0%;
-		transform: translateY(0%);
+		top: -2vw;
 	}
-	#txt{
-		top: 65%
-	}
-	.display{
-		top: 5%
-	}
+    #player1 {
+        visibility: hidden;
+        position: relative;
+    }
+    #player1:after{
+        visibility: visible;
+        position: absolute;
+        top: 0;
+        left: 0;
+        content: "P1";
+    }
+    #player2 {
+        visibility: hidden;
+        position: relative;
+    }
+    #player2:after{
+        visibility: visible;
+        position: absolute;
+        top: 0;
+        left: 0;
+        content: "P2";
+    }
+    #player3 {
+        visibility: hidden;
+        position: relative;
+    }
+    #player3:after{
+        visibility: visible;
+        position: absolute;
+        top: 0;
+        left: 0;
+        content: "P3";
+    }
+    #player4 {
+        visibility: hidden;
+        position: relative;
+    }
+    #player4:after{
+        visibility: visible;
+        position: absolute;
+        top: 0;
+        left: 0;
+        content: "P4";
+    }
 }
 
 @media only screen and (max-device-width: 976px) and (min-device-width: 481px){
 	body{
-		font-size: 2.6vw;
+		font-size: 2.7vw;
 	}
 	h3{
 		font-size: 2.5vw;
@@ -276,13 +310,8 @@ svg{
 		height: 10vw;
 
 	}
-	.display{	
+	.scores{	
 		height: 100%;
 		font-size: 4vw;
-		transform: translateY(-28%);
-	}
-	#txt{
-		height: 100%;
-		transform: translateY(-20%);
 	}
 }

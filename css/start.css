@@ -1,0 +1,97 @@
+*{
+    margin: 0 0;
+    padding: 0 0;
+    user-select: none;
+}
+body{
+    background-color: #304859;
+    width: 100%;
+    font-family: 'Atkinson Hyperlegible', sans-serif;
+    font-size: 1.4vw;
+    color: #7191A5;
+}
+#container{
+    width: 45.4vw;
+    height: 47.7vw;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+#mini-container{
+    background-color: #FCFCFC;
+    width: 100%;
+    height: 38.8vw;
+    position: relative;
+    border-radius: 1.4vw;
+    top: 2vw;
+
+}
+svg{
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 2vw
+}
+#num,#icon,#four,#six{
+    width: 17.8vw;
+    height: 3.6vw;
+    outline: none;
+    border-radius: 1.8vw;
+    text-align: center;
+}
+#num,#num1,#four{
+    background-color: #304859;
+}
+#icon,#num2,#num3,#num4,#six,#num,#num1,#four{
+    background-color: #BCCED9;
+}
+.elements{
+    width: 85%;
+    margin: auto;
+    margin-top: 2.5vw;
+}
+.mini-ele{
+    width: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1vw;
+}
+#num1,#num2,#num3,#num4{
+    width: 8.3vw;
+    height: 3.6vw;
+    border-radius: 1.8vw;
+    text-align: center;
+}
+#strtBn{
+    background-color: #FDA214;
+    border-radius: 2.4vw;
+    height: 4.9vw;
+}
+h3{
+    position: relative;
+    top: 50%;
+    left: 50%;
+    color: #FCFCFC;
+    transform: translate(-50%,-50%);
+    font-size: 1.8vw;
+}
+#strtBn h3{
+    transform: translate(-50%, -20%);
+}
+#ctn{
+    position: relative;
+    margin: 0;
+    top: 50%;
+    transform: translate(0%,-51%);
+}
+#num,#icon,#four,#six,#num1,#num2,#num3,#num4,#strtBn{
+    cursor: pointer;
+}
+#num:hover,#icon:hover,#four:hover,#six:hover,#num1:hover,#num2:hover,#num3:hover,#num4:hover{
+    background-color: #6395B8;
+}
+#strtBn:hover{
+    background-color: #FFB84A;
+}

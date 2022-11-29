@@ -1,12 +1,13 @@
 *{
 	margin: 0;
 	padding: 0;
+    user-select: none;
 }
 body{	
 	font-family: 'Atkinson Hyperlegible', sans-serif;
 	color: #7191A5;
 	background-color: #f2f2f2;
-	font-size: 1.3vw;
+	font-size: 1.4vw;
 }
 h1{
 	font-size: 48px;
@@ -22,6 +23,111 @@ h3{
 }
 a{
 	text-decoration: none;
+}
+#fader{
+	background-color: rgba(0,0,0,0.5);
+	z-index:5;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	display: none;
+}
+#fader-ele{
+	position: absolute;
+	background-color: #f2f2f2;
+	border-radius: 1.5vw;
+	width: 34vw;
+	height: 35vw;
+	margin: 0;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+#mini-fader-ele{
+	position: absolute;
+	margin: 0;
+	width: 85%;
+	height: 80%;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -59%);
+	text-align: center;
+}
+#speech{
+	color: #152938;
+	font-size: 3.7vw;
+	margin-bottom: 1vw;
+}
+p{
+	position: relative;
+	top: -0.6vw;
+	font-size: 1vw;
+	margin: auto;
+}
+.boxes{
+	width: 100%;
+	height: 4vw;
+	background-color: #DFE7EC;
+	border-radius: 0.7vw;
+	margin-bottom: 0.7vw;
+	display: grid;
+	grid-template-columns: 50% 50%;
+}
+.boxes h2{
+	margin: 0;
+	font-size: 2.4vw;
+	color: #304859;
+	text-align: right;
+	position: relative;
+	transform: translate(0%,15%);
+	margin-block-start: 0em;
+    margin-block-end: 0em;
+	right: 1vw;
+	height: 4vw;
+}
+.boxes h3{
+	text-align: left;
+	position: relative;
+	left: 1vw;
+	transform: translate(0%,35%);
+	margin-block-start: 0em;
+    margin-block-end: 0em;
+}
+#box5{
+	width: 100%;
+}
+.options{
+	margin-top: 2vw;
+	border-radius: 1.8vw;
+	width: 14.2vw;
+	height: 2.6vw;
+}
+.options div{
+	position: relative;
+	top: 20%
+}
+#restart{
+	background-color: #FDA214;
+	float: left;
+	color: #FCFCFC;
+	font-size: 1vw;
+}
+#restart:hover{
+	background-color: #FFB84A;
+}
+#setup{
+	background-color:  #DFE7EC;
+	float: right;
+	font-size: 1vw;
+	color: #152938;
+	
+}
+#setup:hover{
+	background-color: #6395B8;
+	color: #FCFCFC
+}
+#downhalf{
+	margin-top: 1.5vw;
 }
 #main-container{
 	position: absolute;
@@ -61,6 +167,9 @@ nav{
 	display: flex;
 	justify-content: center;
 }
+#but1:hover{
+	background-color: #FFB84A;
+}
 #but2{
 	width: 10.4vw;
 	height: 3.6vw;
@@ -71,6 +180,10 @@ nav{
 	margin: auto 0 ;
 	display: flex;
 	justify-content: center;
+}
+#but2:hover{
+	background-color: #6395B8;
+	color: #fcfcfc
 }
 #but1 h3, #but2 h3{
 	margin: auto auto;
@@ -87,7 +200,10 @@ svg{
 	background-color: #304859;
 	border-radius: 50%;
 	margin: auto auto;
-
+    cursor: pointer;
+}
+.ball_element:hover{
+	background-color: #6395B8;
 }
 #balls{
 	position: relative;
@@ -136,6 +252,9 @@ svg{
 }
 #menu{
 	display: none;
+}
+#menu:hover{
+	background-color: #FFB84A;
 }
 
 @media only screen and (max-device-width: 480px)and (min-device-width: 260px){
@@ -256,6 +375,62 @@ svg{
         left: 0;
         content: "P4";
     }
+	#fader-ele{
+		border-radius: 5vw;
+		width: 87.2vw;
+		height: 130.1vw;
+	}
+	#speech{
+		color: #152938;
+		font-size: 6.4vw;
+		margin-bottom: 1vw;
+	}
+	p{
+		font-size: 3.7vw;
+		margin-top: 2vw;
+	}
+	.boxes{
+		height: 12.8vw;
+		border-radius: 1.3vw;
+		margin-bottom: 4vw;
+	}
+	.boxes h2{
+		font-size: 6.2vw;
+		right: 3vw;
+		transform: translate(0%,60%);
+	}
+	.boxes h3{
+		transform: translate(0%,30%);
+		left: 3vw
+	}
+	#box5{
+		width: 100%;
+	}
+	.options{
+		margin-top: 5vw;
+		border-radius: 6vw;
+		width: 100%;
+		height: 10.6vw;
+	}
+	.options div{
+		top: 20%;
+		font-size: 4vw;
+	}
+	#restart{
+		background-color: #FDA214;
+		float: left;
+		color: #FCFCFC;
+		font-size: 1vw;
+	}
+	#setup{
+		background-color:  #DFE7EC;
+		float: right;
+		font-size: 1vw;
+		color: #152938;
+	}
+	#downhalf{
+		margin-top: 7.5vw;
+	}
 }
 
 @media only screen and (max-device-width: 976px) and (min-device-width: 481px){
@@ -304,14 +479,78 @@ svg{
 		width: 100%;
 		
 	}
-	#time, #moves{
+	.players{
+        flex-direction: column;
+        justify-content: center;
+        height: 20vw;
+    }
+	.playerName{
+        position: relative;
+        margin-left: 0.5vw;
+        top: 3vw;
+    }
+	.scores{
 		position: relative;
-		width: 40vw;
-		height: 10vw;
-
+		font-size: 6.4vw;
+		top: 3.5vw;
 	}
-	.scores{	
-		height: 100%;
-		font-size: 4vw;
+	#fader-ele{
+		border-radius: 5vw;
+		width: 85.2vw;
+		height: 91.4vw;
+	}
+	#speech{
+		color: #152938;
+		font-size: 6.3vw;
+		margin-bottom: 1vw;
+	}
+	p{
+		font-size: 2.8vw;
+		margin-top: 2vw;
+	}
+	.boxes{
+		height: 10vw;
+		border-radius: 1.3vw;
+		margin-bottom: 2.5vw;
+	}
+	.boxes h2{
+		font-size: 4.2vw;
+		right: 3vw;
+		transform: translate(0%,60%);
+	}
+	.boxes h3{
+		transform: translate(0%,30%);
+		left: 3vw
+	}
+	#box5{
+		width: 100%;
+	}
+	.options{
+		margin-top: 5vw;
+		border-radius: 6vw;
+		width: 48%;
+		height: 7.6vw;
+	}
+	.options div{
+		top: 20%;
+		font-size: 3vw;
+	}
+	#restart{
+		background-color: #FDA214;
+		float: left;
+		color: #FCFCFC;
+		font-size: 0.8vw;
+	}
+	#setup{
+		background-color:  #DFE7EC;
+		float: right;
+		font-size: 0.8vw;
+		color: #152938;
+	}
+	#downhalf{
+		margin-top: 4.5vw;
+	}
+	#mini-fader-ele{
+		top: 47.5vw
 	}
 }

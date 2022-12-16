@@ -7,7 +7,8 @@ body{
 	font-family: 'Atkinson Hyperlegible', sans-serif;
 	color: #7191A5;
 	background-color: #f2f2f2;
-	font-size: 1.1vw;
+	font-size: 1.4vw;
+	text-align: center;
 }
 h1{
 	font-size: 48px;
@@ -16,7 +17,7 @@ h2{
 	font-size: 32px;
 }
 h3{
-	font-size: 1vw;
+	font-size: 1.4vw;
 	position: relative;
 	margin-top: 0;
 	margin-bottom: 0;
@@ -25,19 +26,20 @@ a{
 	text-decoration: none;
 }
 #fader{
+	width: 100%;
 	background-color: rgba(0,0,0,0.5);
 	z-index:5;
 	position: absolute;
 	width: 100%;
 	height: 100%;
-	display: none;
+	
 }
 #fader-ele{
 	position: absolute;
 	background-color: #f2f2f2;
 	border-radius: 1.5vw;
 	width: 34vw;
-	height: 35vw;
+	height: 31vw;
 	margin: 0;
 	top: 50%;
 	left: 50%;
@@ -47,64 +49,75 @@ a{
 	position: absolute;
 	margin: 0;
 	width: 85%;
-	height: 80%;
+	height: 83%;
 	top: 50%;
 	left: 50%;
-	transform: translate(-50%, -59%);
+	transform: translate(-50%, -46%);
 	text-align: center;
 }
 #speech{
 	color: #152938;
 	font-size: 3.7vw;
-	margin-bottom: 1vw;
 }
 p{
 	position: relative;
-	top: -0.6vw;
 	font-size: 1vw;
 	margin: auto;
+	margin-top: 0.5vw;
 }
 .boxes{
+	position: relative;
 	width: 100%;
 	height: 4vw;
+	top: 1.5vw;
 	background-color: #DFE7EC;
 	border-radius: 0.7vw;
-	margin-bottom: 0.7vw;
+	margin-bottom: 1vw;
 	display: grid;
 	grid-template-columns: 50% 50%;
+	justify-content: space-between;
+	margin-top: 0.5vw;
 }
 .boxes h2{
+	display: inline;
 	margin: 0;
 	font-size: 2.4vw;
 	color: #304859;
-	text-align: right;
-	position: relative;
-	transform: translate(0%,15%);
+	position: absolute;
 	margin-block-start: 0em;
     margin-block-end: 0em;
-	right: 1vw;
+	right: 4vw;
 	height: 4vw;
+	transform: translate(0,15%);
 }
 .boxes h3{
+	display: inline;
 	text-align: left;
 	position: relative;
 	left: 1vw;
-	transform: translate(0%,35%);
+	transform: translate(0%,30%);
 	margin-block-start: 0em;
     margin-block-end: 0em;
 }
+#min,#mov{
+	text-align: right;
+	position: relative;
+	right: 1vw;
+}
 #box5{
 	width: 100%;
+	position: absolute;
+	top: 20vw;
 }
 .options{
-	margin-top: 2vw;
 	border-radius: 1.8vw;
-	width: 14.2vw;
+	width: 13.2vw;
 	height: 2.6vw;
 }
 .options div{
 	position: relative;
-	top: 20%
+	top: 25%;
+	text-align: center;
 }
 #restart{
 	background-color: #FDA214;
@@ -120,10 +133,10 @@ p{
 	float: right;
 	font-size: 1vw;
 	color: #152938;
-	color: #FCFCFC
 }
 #setup:hover{
 	background-color: #6395B8;
+	color: #FCFCFC
 }
 #downhalf{
 	margin-top: 1.5vw;
@@ -199,7 +212,40 @@ svg{
 	background-color: #304859;
 	border-radius: 50%;
 	margin: auto auto;
+	position: relative;
 	cursor: pointer;
+	display: grid;
+	grid-template-columns: 100%;
+	grid-template-rows: 100%;
+	
+}
+.ball_element svg{
+	color: #FCFCFC;
+	position: relative;
+	margin:auto 0;
+	text-align: center;
+	box-sizing: border-box;
+	grid-template-rows: 100%;
+	grid-template-columns: 100%;
+	width: 50%;
+	height: 50%;
+	top: 0%;
+	left: 50%;
+	transform: translate(-50%,0);
+	justify-content: center;
+	display: none;
+}
+.ball_element span{
+	position: relative;
+	margin: auto;
+	font-size: 2vw;
+	color: #FCFCFC;
+	display: none;
+}
+
+.ball_element path{
+	position: relative;
+	margin: 0;
 }
 .ball_element:hover{
 	background-color: #6395B8;
@@ -246,10 +292,31 @@ svg{
 .playerName{
     margin-top: 9%
 }
-#minutes{
-	float: left;
-}
 #menu{
+	display: none;
+}
+.clicked{
+	background-color: #FDA214;
+}
+.clicked svg, .clicked span{
+	display: inline;
+}
+.checked{
+	background-color: #BCCED9;
+}
+.checked svg, .checked span{
+	display: inline;
+}
+.checked:hover{
+	background-color:#BCCED9 ;
+}
+#m-fader{
+	width: 100%;
+	background-color: rgba(0,0,0,0.5);
+	z-index:5;
+	position: absolute;
+	width: 100%;
+	height: 100%;
 	display: none;
 }
 
@@ -429,6 +496,62 @@ svg{
 	}
 	#downhalf{
 		margin-top: 7.5vw;
+	}
+	.colored{
+		background-color: #FDA214;
+	}
+	#menu{
+		width: 16.3vw;
+		height: 8.3vw;
+		display: inline;
+		background-color: #FDA214;
+		color: #FCFCFC;
+		text-align: center;
+		border-radius: 26px;
+		margin: auto  ;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+	#menu:hover{
+		background-color: #FFB84A;
+	}
+	#menu-fade{
+		width: 87.2vw;
+		height: 59.7vw;
+		position: absolute;
+		margin:0;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%,-50%);
+		background-color: #f2f2f2;
+		border-radius: 4vw;
+	}
+	#box{
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		position:relative;
+		top: 2.5vw
+	}
+	.menu{
+		width:74.4vw;
+		height: 12.8vw;
+		margin: auto;
+		margin-top: 4vw;
+		background-color: #DFE7EC;
+		color: #304859
+	}
+	.menu:hover{
+		background-color: #6395B8;
+		color: #fcfcfc
+	}
+	#menu_restart{
+		background-color: #FDA214;
+		color: #fcfcfc
+	}
+	#menu_restart:hover{
+		background-color: #FFB84A;
 	}
 }
 

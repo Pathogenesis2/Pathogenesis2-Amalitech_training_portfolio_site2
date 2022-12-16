@@ -25,7 +25,6 @@ body{
     position: relative;
     border-radius: 1.4vw;
     top: 2vw;
-
 }
 svg{
     position: relative;
@@ -94,4 +93,103 @@ h3{
 }
 #strtBn:hover{
     background-color: #FFB84A;
+}
+
+@media only screen and (max-width: 480px) and (min-width:260px){
+    body{
+        font-size: 4vw;
+    }
+    #container{
+        width: 87.2vw;
+        height: auto
+    }
+    #mini-container{
+        top:0px;
+        height: 102.9vw;
+        position: relative;
+        border-radius: 3vw;
+        margin-top: 10vw;
+    }
+    svg{
+        position: relative;
+        top: 0vw;
+        transform: scale(0.7);
+        left: 0%;
+        right: 0%;
+        transform: translate(60%,0);
+        
+    }
+    #num,#icon,#four,#six{
+        width: 35.7vw;
+        height: 10.7vw;
+        border-radius: 6vw;
+    }
+    .elements{
+        width: 85%;
+        margin-top: 6vw;
+    }
+    .mini-ele{
+        margin-top: 3vw;
+    }
+    #num1,#num2,#num3,#num4{
+        width: 16.5vw;
+        height: 10.7vw;
+        border-radius: 6vw;
+    }
+    #strtBn{
+        border-radius: 8vw;
+        width: 74.4vw;
+        height: 12.8vw;
+    }
+    h3{
+        font-size: 4.4vw;
+    }
+    #strtBn h3{
+        transform: translate(-50%, -25%);
+    } 
+}
+@media only screen and (max-width: 976px) and (min-width: 481px){
+    body{
+        font-size: 3vw
+    }
+    #container{
+        width: 85.2vw;
+        height: auto
+    }
+    #mini-container{
+        top:0px;
+        height: 72.8vw;
+        position: relative;
+        border-radius: 4vw;
+        margin-top: 4vw;
+    }
+    svg{
+        top: 0vw;
+        width: 19.9vw;
+        height: 6.5vw;
+    }
+    #num,#icon,#four,#six{
+        width: 33.3vw;
+        height: 6.8vw;
+        border-radius: 6vw;
+    }
+    .elements{
+        margin-top: 4vw;
+    }
+    .mini-ele{
+        margin-top: 2vw;
+    }
+    #num1,#num2,#num3,#num4{
+        width: 15.5vw;
+        height: 6.8vw;
+        border-radius: 6vw;
+    }
+    #strtBn{
+        border-radius: 8vw;
+        width: 70.4vw;
+        height: 9.1vw;
+    }
+    h3{
+        font-size: 4vw;
+    }
 }

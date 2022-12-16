@@ -4,29 +4,37 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@700&display=swap" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="../css/single-4x4-style.css">
-	<link rel='icon' type="icon" href="../assets/favicon-32x32.png">
-	<title>4x4 single player</title>
+	<link rel="stylesheet" type="text/css" href="../../css/multi-4x4.css">
+	<link rel='icon' type="icon" href="../../assets/favicon-32x32.png">
+	<title>4x4 multi player</title>
 </head>
 <body>
 	<div id="fader">
 		<div id="fader-ele">
 			<div id="mini-fader-ele">
-				<h1 id="speech">You did it!</h1>
-				<p>Game over! Here's how you got on...</p>
+				<h1 id="speech">Its a tie!</h1>
+				<p>Game over! Here are the results...</p>
 				<div id="downhalf">
-					<div id="tm" class="boxes">
-						<h3 class="text" id="elapse">Time Elapses</h3>
-						<h2 id="min">0:0</div>
-					</div>
-					<div id="box2" class="boxes">
-						<h3 class="text" id="mvs">Moves Taken</h3>
-						<h2 id="mov">0 Moves</div>
-					</div>
-					<div id="box5">
-						<div id="restart" class="options"><div>Restart </div></div>
-						<div id="setup" class="options"><div>Setup New Game</div></div>
-					</div>
+				<div id="box1" class="boxes">
+					<h3>Player 3 (Winner!)</h3>
+					<h2>6 Pairs</h2>
+				</div>
+				<div id="box2" class="boxes">
+					<h3>Player 1 (Winner!)</h3>
+					<h2>6 Pairs</h2>
+				</div>
+				<div id="box3" class="boxes">
+					<h3>Player 2 </h3>
+					<h2>6 Pairs</h2>
+				</div>
+				<div id="box4" class="boxes">
+					<h3>Player 4 </h3>
+					<h2>6 Pairs</h2>
+				</div>
+				<div id="box5">
+					<div id="restart" class="options"><div>Restart </div></div>
+					<div id="setup" class="options"><div>Setup New Game</div></div>
+				</div>
 				</div>
 			</div>
 		</div>
@@ -61,20 +69,17 @@
 				<div class="ball_element"></div>
 			</div>
 			<div id='footers'>
-				<div id='time'>
-					<span id='txt'>Time</span>
-					<span id="element">
-						<p id='minutes' class="display">00:</p>
-						<p id='seconds' class="display">00</p>
-					</span>
+				<div id='Player1' class="players">
+					<div class='playerName' id="player1">Player 1</div>
+					<div class='scores' id="score1">00</div>
 				</div>
-				<div id='moves'>
-					<span id='txt'>Moves</span>
-					<span id='js' class="display">0</span>
+				<div id='Player2' class="players">
+					<div class='playerName' id="player2">Player 2</div>
+					<div class='scores' id="score2">00</div>
 				</div>
 			</div>
 		</div>
 	</div>
-	<script type="text/javascript" src='..\js\single-4x4-script.js'></script>
+	<script type="text/javascript" src=''></script>
 </body>
 </html>

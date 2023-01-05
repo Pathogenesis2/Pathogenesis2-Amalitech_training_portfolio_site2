@@ -26,50 +26,46 @@ a{
 	text-decoration: none;
 }
 #fader{
-	width: 100%;
 	background-color: rgba(0,0,0,0.5);
 	z-index:5;
 	position: absolute;
 	width: 100%;
 	height: 100%;
-	
+	display: none
 }
 #fader-ele{
 	position: absolute;
 	background-color: #f2f2f2;
 	border-radius: 1.5vw;
 	width: 34vw;
-	height: 31vw;
 	margin: 0;
+	padding: 4vw 0vw;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
 }
 #mini-fader-ele{
-	position: absolute;
-	margin: 0;
+	position: relative;
+	margin: 0 auto;
 	width: 85%;
-	height: 83%;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -46%);
 	text-align: center;
 }
 #speech{
 	color: #152938;
-	font-size: 3.7vw;
+	font-size: 3.2vw;
+	margin-top: -1vw;
+	margin-bottom: 1vw;
 }
 p{
 	position: relative;
 	font-size: 1vw;
 	margin: auto;
-	margin-top: 0.5vw;
+	margin-bottom: 1.5vw;
 }
 .boxes{
 	position: relative;
 	width: 100%;
 	height: 4vw;
-	top: 1.5vw;
 	background-color: #DFE7EC;
 	border-radius: 0.7vw;
 	margin-bottom: 1vw;
@@ -86,7 +82,7 @@ p{
 	position: absolute;
 	margin-block-start: 0em;
     margin-block-end: 0em;
-	right: 4vw;
+	right: 1vw;
 	height: 4vw;
 	transform: translate(0,15%);
 }
@@ -95,9 +91,10 @@ p{
 	text-align: left;
 	position: relative;
 	left: 1vw;
-	transform: translate(0%,30%);
+	transform: translate(0%,35%);
 	margin-block-start: 0em;
     margin-block-end: 0em;
+	font-size: 1vw
 }
 #min,#mov{
 	text-align: right;
@@ -106,8 +103,7 @@ p{
 }
 #box5{
 	width: 100%;
-	position: absolute;
-	top: 20vw;
+	margin-top: 2vw
 }
 .options{
 	border-radius: 1.8vw;
@@ -139,7 +135,7 @@ p{
 	color: #FCFCFC
 }
 #downhalf{
-	margin-top: 1.5vw;
+	position: relative;
 }
 #main-container{
 	position: absolute;
@@ -295,6 +291,9 @@ svg{
 #menu{
 	display: none;
 }
+#menu:hover{
+	background-color: #FFB84A;
+}
 .clicked{
 	background-color: #FDA214;
 }
@@ -325,7 +324,7 @@ svg{
 		font-size: 3.8vw;
 	}
 	h3{
-		font-size: 3.8vw;
+		font-size: 3.9vw;
 		position: relative;
 		margin-top: 0;
 		margin-bottom: 0;
@@ -364,7 +363,9 @@ svg{
 	.ball_element{
 		width: 12.5vw;
 		height: 12.5vw;
-	
+	}
+	.ball_element span{
+		font-size: 5vw;
 	}
 	#balls{
 		position: relative;
@@ -444,16 +445,16 @@ svg{
 	#fader-ele{
 		border-radius: 5vw;
 		width: 87.2vw;
-		height: 130.1vw;
+		padding: 7vw 0vw;
 	}
 	#speech{
 		color: #152938;
 		font-size: 6.4vw;
-		margin-bottom: 1vw;
+		margin-bottom: 1.5vw;
 	}
 	p{
 		font-size: 3.7vw;
-		margin-top: 2vw;
+		margin-bottom: 4vw	;
 	}
 	.boxes{
 		height: 12.8vw;
@@ -466,14 +467,15 @@ svg{
 		transform: translate(0%,60%);
 	}
 	.boxes h3{
-		transform: translate(0%,30%);
-		left: 3vw
+		transform: translate(0%,35%);
+		left: 3vw;
+		font-size: 3vw;
 	}
 	#box5{
 		width: 100%;
+		margin-top: 0vw;
 	}
 	.options{
-		margin-top: 5vw;
 		border-radius: 6vw;
 		width: 100%;
 		height: 10.6vw;
@@ -493,9 +495,10 @@ svg{
 		float: right;
 		font-size: 1vw;
 		color: #152938;
+		margin-top: 4vw
 	}
 	#downhalf{
-		margin-top: 7.5vw;
+		margin-bottom: 5vw
 	}
 	.colored{
 		background-color: #FDA214;
@@ -560,7 +563,7 @@ svg{
 		font-size: 2.7vw;
 	}
 	h3{
-		font-size: 2.5vw;
+		font-size: 2vw;
 	}
 	#container{
 		width: 89.7vw;
@@ -619,21 +622,21 @@ svg{
 	#fader-ele{
 		border-radius: 5vw;
 		width: 85.2vw;
-		height: 91.4vw;
+		padding: 7vw 0vw;
 	}
 	#speech{
 		color: #152938;
 		font-size: 6.3vw;
-		margin-bottom: 1vw;
+		margin-bottom: 2vw;
 	}
 	p{
 		font-size: 2.8vw;
-		margin-top: 2vw;
+		margin-bottom: 2vw;
 	}
 	.boxes{
 		height: 10vw;
 		border-radius: 1.3vw;
-		margin-bottom: 2.5vw;
+		margin-bottom: 3vw;
 	}
 	.boxes h2{
 		font-size: 4.2vw;
@@ -642,37 +645,36 @@ svg{
 	}
 	.boxes h3{
 		transform: translate(0%,30%);
-		left: 3vw
+		left: 3vw;
+		font-size: 2.5vw;
 	}
 	#box5{
 		width: 100%;
+		margin-top: 3vw;
 	}
 	.options{
-		margin-top: 5vw;
+		margin-top: 2vw;
 		border-radius: 6vw;
 		width: 48%;
 		height: 7.6vw;
 	}
 	.options div{
-		top: 20%;
 		font-size: 3vw;
 	}
 	#restart{
 		background-color: #FDA214;
 		float: left;
 		color: #FCFCFC;
-		font-size: 0.8vw;
 	}
 	#setup{
 		background-color:  #DFE7EC;
 		float: right;
-		font-size: 0.8vw;
 		color: #152938;
 	}
 	#downhalf{
-		margin-top: 4.5vw;
+		margin-top: 3vw;
 	}
-	#mini-fader-ele{
-		top: 47.5vw
+	.ball_element span{
+		font-size: 4vw;
 	}
 }

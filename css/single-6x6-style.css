@@ -4,7 +4,6 @@
 	user-select: none;
 }
 body{
-	
 	font-family: 'Atkinson Hyperlegible', sans-serif;
 	color: #7191A5;
 	background-color: #f2f2f2;
@@ -33,7 +32,7 @@ a{
 	position: absolute;
 	width: 100%;
 	height: 100%;
-	
+	display: none;
 }
 #fader-ele{
 	position: absolute;
@@ -108,7 +107,7 @@ p{
 #box5{
 	width: 100%;
 	position: absolute;
-	top: 20vw;
+	top: 19vw;
 }
 .options{
 	border-radius: 1.8vw;
@@ -236,7 +235,7 @@ svg{
 .ball_element span{
 	position: relative;
 	margin: auto;
-	font-size: 2vw;
+	font-size: 2.5vw;
 	color: #FCFCFC;
 	display: none;
 }
@@ -373,6 +372,9 @@ svg{
 		height: 12.5vw;
 	
 	}
+	.ball_element span{
+		font-size: 5vw;
+	}
 	#balls{
 		position: relative;
 		margin: auto;
@@ -402,15 +404,13 @@ svg{
 		position: relative;
 		height: 100%;
 		font-size: 6.4vw;
-		top: 0%;
+		top: 5%;
 		transform: translateY(0%);
 	}
 	#txt{
 		top: 65%
 	}
-	.display{
-		top: 5%
-	}
+	
 	#fader-ele{
 		border-radius: 3vw;
 		width: 87.2vw;
@@ -541,7 +541,9 @@ svg{
 	.ball_element{
 		width: 10.7vw;
 		height: 10.7vw;
-	
+	}
+	.ball_element span{
+		font-size: 5vw
 	}
 	#balls{
 		width: 74.5vw;

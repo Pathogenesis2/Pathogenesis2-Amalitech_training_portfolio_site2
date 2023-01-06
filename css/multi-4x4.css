@@ -314,6 +314,13 @@ svg{
 	height: 100%;
 	display: none;
 }
+.triangle{
+	position: relative;
+	fill: rgb(253, 162, 20);
+	transform: rotate(180deg);
+	text-align: center;
+	visibility: visible;
+}
 
 @media only screen and (max-device-width: 480px) and (min-device-width: 260px){
 	body{

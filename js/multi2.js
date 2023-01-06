@@ -36,11 +36,11 @@
 		
 		document.getElementById('Player1').style.backgroundColor='#FDA214'
 		document.getElementById('Player1').style.color='#Fcfcfc'
+		document.getElementById('svg2').style.visibility='hidden'
 		
 		balls.forEach((ball) => {
 			ball.addEventListener("click", () => {
 				ball.classList.add("clicked");
-				console.log([].slice.call(document.querySelector('#footers').children).length)
 				
 				if (counter === 0) {
 					firstChoice = ball.getAttribute("animal");
@@ -96,26 +96,12 @@
 					
 					score['score1']+=1
 					document.getElementById('score1').innerHTML=score['score1']
-					console.log(score['score1'])
 				}
 				else{
 					
 					score['score2']+=1;
 					document.getElementById('score2').innerHTML=score['score2']
-					console.log(score['score2'])
-					
 				}
-				/*if(keeper%2===1){
-					score['score2']+=1
-					document.getElementById('score2').innerHTML=score['score2']
-					console.log(score['score2'])
-					
-				}
-				else{
-					score['score1']+=1
-					document.getElementById('score1').innerHTML=score['score1']
-					console.log(score1['score1'])
-				}*/
 			}
 			else if (firstChoice === secondChoice && firstindex === secondIndex) {
 				const correctCards = document.querySelectorAll(
@@ -135,14 +121,18 @@
 				if(keeper['increment']%2===1){
 					document.getElementById('Player1').style.backgroundColor='#FDA214'
 					document.getElementById('Player1').style.color='#Fcfcfc'
+					document.getElementById('svg1').style.visibility=''
 					document.getElementById('Player2').style.backgroundColor=''
-					document.getElementById('player2').style.color='#7191A5'
+					document.getElementById('Player2').style.color=''
+					document.getElementById('svg2').style.visibility='hidden'
 				}
 				else{
 					document.getElementById('Player2').style.backgroundColor='#FDA214'
 					document.getElementById('Player2').style.color='#Fcfcfc'
+					document.getElementById('svg2').style.visibility=''
 					document.getElementById('Player1').style.backgroundColor=''
 					document.getElementById('Player1').style.color='#7191A5'
+					document.getElementById('svg1').style.visibility='hidden'
 					console.log('incrementeven',keeper['increment'])
 				}
 				

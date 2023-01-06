@@ -41,7 +41,6 @@
 		balls.forEach((ball) => {
 			ball.addEventListener("click", () => {
 				ball.classList.add("clicked");
-				console.log([].slice.call(document.querySelector('#footers').children).length)
 				
 				if (counter === 0) {
 					firstChoice = ball.getAttribute("animal");
@@ -66,28 +65,24 @@
 						for(let i=0; i<Object.keys(score).length; i++){
 							if(Object.values(score)[i]===Math.max(...Object.values(score))){
 								newScore['score'+  Object.keys(score)[i].slice(-1)]=Object.values(score)[i]
-								//scripe[Object.keys(scripe)[i]]=0
 								delete score[Object.keys(score)[i]]
 							}
 						}
 						for(let i=0; i<Object.keys(score).length; i++){
 							if(Object.values(score)[i]===Math.max(...Object.values(score))){
 								newScore['score'+  Object.keys(score)[i].slice(-1)]=Object.values(score)[i]
-								//scripe[Object.keys(scripe)[i]]=0
 								delete score[Object.keys(score)[i]]
 							}
 						}
 						for(let i=0; i<Object.keys(score).length; i++){
 							if(Object.values(score)[i]===Math.max(...Object.values(score))){
 								newScore['score'+  Object.keys(score)[i].slice(-1)]=Object.values(score)[i]
-								//scripe[Object.keys(scripe)[i]]=0
 								delete score[Object.keys(score)[i]]
 							}
 						}
 						for(let i=0; i<Object.keys(score).length; i++){
 							if(Object.values(score)[i]===Math.max(...Object.values(score))){
 								newScore['score'+  Object.keys(score)[i].slice(-1)]=Object.values(score)[i]
-								//scripe[Object.keys(scripe)[i]]=0
 								delete score[Object.keys(score)[i]]
 							}
 						}
@@ -101,15 +96,12 @@
 							document.getElementById('box1-c').innerHTML='Player ' + Object.keys(newScore)[0].slice(-1)+ ' (Winner!)'  
 							document.getElementById('box1-pair').innerHTML=Object.values(newScore)[0] + ' Pairs'
 						}
-						console.log('newScore', newScore)
-						console.log('score',score)
 						document.getElementById('box2-c').innerHTML='Player ' + Object.keys(newScore)[1].slice(-1)  
 						document.getElementById('box2-pair').innerHTML=Object.values(newScore)[1] + ' Pairs'
 						document.getElementById('box3-c').innerHTML='Player ' + Object.keys(newScore)[2].slice(-1) 
 						document.getElementById('box3-pair').innerHTML=Object.values(newScore)[2] + ' Pairs'
 						document.getElementById('box4-c').innerHTML='Player ' + Object.keys(newScore)[3].slice(-1)   
 						document.getElementById('box4-pair').innerHTML=Object.values(newScore)[3] + ' Pairs'
-						console.log('it is done')
 						document.querySelector('#fader').style.display='block'
 					}    
                 }
@@ -130,8 +122,6 @@
 				if(window.getComputedStyle(document.getElementById('Player1')).backgroundColor==='rgb(253, 162, 20)'){
 					score['score1']+=1
 					document.getElementById('score1').innerHTML=score['score1']
-					console.log(score['score1'])
-                    console.log('maaaaaame')
 				}
 				else if(window.getComputedStyle(document.getElementById('Player2')).backgroundColor==='rgb(253, 162, 20)'){
 					score['score2']+=1;

@@ -98,10 +98,11 @@ h3{
 @media only screen and (max-width: 480px) and (min-width:260px){
     body{
         font-size: 4vw;
+        overflow: hidden;
     }
     #container{
         width: 87.2vw;
-        height: auto
+        height: auto;
     }
     #mini-container{
         top:0px;
@@ -145,7 +146,7 @@ h3{
         font-size: 4.4vw;
     }
     #strtBn h3{
-        transform: translate(-50%, -25%);
+        transform: translate(-50%, -20%);
     } 
 }
 @media only screen and (max-width: 976px) and (min-width: 481px){
@@ -191,5 +192,8 @@ h3{
     }
     h3{
         font-size: 4vw;
+    }
+    #strtBn h3{
+        transform: translate(-50%, -25%);
     }
 }

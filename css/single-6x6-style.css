@@ -505,6 +505,14 @@ svg{
 	#menu_restart:hover{
 		background-color: #FFB84A;
 	}
+	#element{
+		display: grid;
+		grid-template-columns: 50% 50%;
+	}
+	#minutes, #seconds, #js{
+		margin-top: 2vw;
+		margin-bottom: 0px
+	}
 }
 
 @media only screen and (max-device-width: 976px) and (min-device-width: 481px){

@@ -147,7 +147,6 @@ p{
 	width: 77.1vw;
 	margin: auto;
 	position: relative;
-
 }
 
 nav{
@@ -393,16 +392,14 @@ svg{
 	
 	.display{
 		position: relative;
-		height: 100%;
 		font-size: 6.4vw;
 		top: 0%;
 		transform: translateY(0%);
+		height: auto;
+		display: inline
 	}
 	#txt{
 		top: 65%
-	}
-	.display{
-		top: 5%
 	}
 	#fader-ele{
 		border-radius: 3vw;
@@ -497,6 +494,14 @@ svg{
 	}
 	#menu_restart:hover{
 		background-color: #FFB84A;
+	}
+	#element{
+		display: grid;
+		grid-template-columns: 50% 50%;
+	}
+	#minutes, #seconds, #js{
+		margin-top: 2vw;
+		margin-bottom: 0px
 	}
 }
 

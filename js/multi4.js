@@ -15,7 +15,7 @@
 		}
 		
 		const newGame=()=>{
-			location.href='../start.html'
+			location.href='../../index.html'
 		}
 		
 		const menu=()=>{

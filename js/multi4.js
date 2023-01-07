@@ -37,7 +37,19 @@
 		
 		document.getElementById('Player1').style.backgroundColor='#FDA214'
 		document.getElementById('Player1').style.color='#Fcfcfc'
-		
+		document.getElementById('svg2').style.visibility='hidden'
+		document.getElementById('Player3').style.backgroundColor=''
+		document.getElementById('svg3').style.visibility='hidden'
+		document.getElementById('Player4').style.backgroundColor=''
+		document.getElementById('svg4').style.visibility='hidden'
+		balls.forEach((ball) =>{
+			ball.addEventListener('mousein', ()=>{
+				ball.classList.add('ball_element_in')
+				setTimeout(()=>{
+					ball.classList.remove('ball_element_in')
+				}, 500)
+			})
+		})
 		balls.forEach((ball) => {
 			ball.addEventListener("click", () => {
 				ball.classList.add("clicked");
@@ -151,30 +163,38 @@
 					incorrectCards[1].classList.remove("clicked");
 				}, 800);
 				keeper['increment']+=1
-                if(window.getComputedStyle(document.getElementById('Player1')).backgroundColor==='rgb(253, 162, 20)'){
+				if(window.getComputedStyle(document.getElementById('Player1')).backgroundColor==='rgb(253, 162, 20)'){
 					document.getElementById('Player2').style.backgroundColor='#FDA214'
 					document.getElementById('Player2').style.color='#Fcfcfc'
+					document.getElementById('svg2').style.visibility=''
 					document.getElementById('Player1').style.backgroundColor=''
 					document.getElementById('Player1').style.color=''
+					document.getElementById('svg1').style.visibility='hidden'
 				}
 				else if(window.getComputedStyle(document.getElementById('Player2')).backgroundColor==='rgb(253, 162, 20)'){
                     document.getElementById('Player3').style.backgroundColor='#FDA214'
 					document.getElementById('Player3').style.color='#Fcfcfc'
+					document.getElementById('svg3').style.visibility=''
 					document.getElementById('Player2').style.backgroundColor=''
 					document.getElementById('Player2').style.color=''
+					document.getElementById('svg2').style.visibility='hidden'
 				}
                 else if(window.getComputedStyle(document.getElementById('Player3')).backgroundColor==='rgb(253, 162, 20)'){
                     document.getElementById('Player4').style.backgroundColor='#FDA214'
 					document.getElementById('Player4').style.color='#Fcfcfc'
+					document.getElementById('svg4').style.visibility=''
 					document.getElementById('Player3').style.backgroundColor=''
 					document.getElementById('Player3').style.color=''
+					document.getElementById('svg3').style.visibility='hidden'
 
                 }
                 else{
                     document.getElementById('Player1').style.backgroundColor='#FDA214'
 					document.getElementById('Player1').style.color='#Fcfcfc'
+					document.getElementById('svg1').style.visibility=''
 					document.getElementById('Player4').style.backgroundColor=''
 					document.getElementById('Player4').style.color=''
+					document.getElementById('svg4').style.visibility='hidden'
                 }
 				
 			}

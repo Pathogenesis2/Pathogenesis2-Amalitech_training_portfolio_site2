@@ -326,26 +326,12 @@ svg{
 	}
 	#container{
 		width: 87.2vw;
-		height: 90%;
 		margin: 0 0;
 	}
 	nav{
 		width: 87.2vw;
-		margin-bottom: 6.2vw;
 	}
-	#menu{
-		width: 16.3vw;
-		height: 8.3vw;
-		display: inline;
-		background-color: #FDA214;
-		color: #FCFCFC;
-		text-align: center;
-		border-radius: 26px;
-		margin: auto  ;
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-	}
+
 	#menu:hover{
 		background-color: #FFB84A;
 	}
@@ -367,8 +353,8 @@ svg{
 	#balls{
 		position: relative;
 		margin: auto;
-		margin-top: 20vw;
-		margin-bottom: 20vw;
+		margin-top: 10vw;
+		margin-bottom: 10vw;
 		width: 87.2vw;
 		height:	87.2vw;
 		display: grid;
@@ -475,6 +461,19 @@ svg{
 		flex-direction: column;
 		position:relative;
 		top: 2.5vw
+	}
+	#menu{
+		width: 16.3vw;
+		height: 8.3vw;
+		display: inline;
+		background-color: #FDA214;
+		color: #FCFCFC;
+		text-align: center;
+		border-radius: 26px;
+		margin: auto  ;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
 	}
 	.menu{
 		width:74.4vw;

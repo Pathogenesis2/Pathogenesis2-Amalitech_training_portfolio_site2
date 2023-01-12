@@ -341,8 +341,6 @@ svg{
 	}
 	nav{
 		width: 87.2vw;
-		margin-bottom: 22vw;
-
 	}
 	#menu{
 		width: 16.3vw;
@@ -381,12 +379,12 @@ svg{
 		width: 87.2vw;
 		height:	87.2vw;
 		display: grid;
+		margin: 10vw 0;
 		grid-template-columns: repeat(6, 16.67%);
 		grid-template-rows: repeat(6, 16.67%);
 	}
 	#footers{
 		position: relative;
-		margin-top: 25vw;
 		width:87.2vw;
 	}
 	#time, #moves{
@@ -556,10 +554,10 @@ svg{
 	#balls{
 		width: 74.5vw;
 		height: 74.5vw;
-		margin-top: 15vw
+		margin-top: 10vw;
+		margin-bottom: 10vw;
 	}
 	#footers{
-		margin-top: 20vw;
 		width: 74.5vw;
 	}
 	#time, #moves{

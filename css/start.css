@@ -111,15 +111,6 @@ h3{
         border-radius: 3vw;
         margin-top: 10vw;
     }
-    svg{
-        position: relative;
-        top: 0vw;
-        transform: scale(0.7);
-        left: 0%;
-        right: 0%;
-        transform: translate(60%,0);
-        
-    }
     #num,#icon,#four,#six{
         width: 35.7vw;
         height: 10.7vw;

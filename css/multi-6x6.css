@@ -336,7 +336,6 @@ svg{
 	}
 	#container{
 		width: 87.2vw;
-		height: 90%;
 		margin: 0 0;
 	}
 	nav{
@@ -378,8 +377,8 @@ svg{
 		width: 87.2vw;
 		height:	87.2vw;
 		display: grid;
-        margin-top: 25vw;
-        margin-bottom: 25vw;
+        margin-top: 5vw;
+        margin-bottom: 5vw;
 		grid-template-columns: repeat(6, 16.67%);
 		grid-template-rows: repeat(6, 16.67%);
 	}
@@ -602,8 +601,8 @@ svg{
 	#balls{
 		width: 74.5vw;
 		height: 74.5vw;
-		margin-top: 10vw;
-        margin-bottom: 10vw
+		margin-top: 5vw;
+        margin-bottom: 5vw
 	}
 	#footers{
 		width: 100%;

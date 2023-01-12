@@ -293,6 +293,9 @@ svg{
 .clicked{
 	background-color: #FDA214;
 }
+.clicked:hover{
+	background-color: #FDA214;
+}
 .clicked svg, .clicked span{
 	display: inline;
 }
@@ -303,7 +306,7 @@ svg{
 	display: inline;
 }
 .checked:hover{
-	background-color:#BCCED9 ;
+	background-color: #BCCED9;
 }
 #m-fader{
 	width: 100%;
@@ -372,12 +375,15 @@ svg{
 		font-size: 10vw;
 		top:17%;
 	}
+	.ball_element:hover{
+		background-color: transparent;
+	}
 	
 	#balls{
 		position: relative;
 		margin: auto;
-		margin-top: 20vw;
-		margin-bottom: 20vw;
+		margin-top: 10vw;
+		margin-bottom: 10vw;
 		width: 87.2vw;
 		height:	87.2vw;
 		display: grid;
@@ -594,23 +600,27 @@ svg{
 		top: 0.7vw
 	}
 	.ball_element{
-		width: 20vw;
-		height: 20vw;
-	
+		width: 17vw;
+		height: 17vw;
 	}
 	.ball_element span{
-		font-size: 15vw;
-		top: 8%
+		position: s;
+		width: 100%;
+		height: 100%;
+		font-size: 8vw;
+		top: 22%
+	}
+	.ball_element:hover{
+		background-color: transparent;
 	}
 	#balls{
-		width: 100%;
-		height: 89.7vw;
-		margin-top: 10vw;
-		margin-bottom: 10vw;
+		width: 90%;
+		height: 80.7vw;
+		margin-top: 5vw;
+		margin-bottom: 5vw;
 	}
 	#footers{
 		width: 100%;
-		
 	}
 	.players{
         flex-direction: column;

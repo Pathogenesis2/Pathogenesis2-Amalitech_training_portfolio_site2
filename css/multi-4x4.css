@@ -1,8 +1,16 @@
 *{
 	margin: 0;
 	padding: 0;
+	-webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+	-webkit-tap-highlight-color: transparent;
     user-select: none;
+	
 }
+
 body{	
 	font-family: 'Atkinson Hyperlegible', sans-serif;
 	color: #7191A5;
@@ -293,8 +301,8 @@ svg{
 .clicked{
 	background-color: #FDA214;
 }
-.clicked:hover{
-	background-color: #FDA214;
+.click:hover{
+	background-color: #FDA214;;
 }
 .clicked svg, .clicked span{
 	display: inline;
@@ -376,7 +384,7 @@ svg{
 		top:17%;
 	}
 	.ball_element:hover{
-		background-color: transparent;
+	
 	}
 	
 	#balls{

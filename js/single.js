@@ -1,11 +1,10 @@
-
 let seconds = document.getElementById('seconds');
 let minutes = document.getElementById('minutes');
 let firstChoice;
 let secondChoice;
 let keeper={'minute':'','seconds':''};
 let move={'mv':''};
-const balls = [].slice.call(document.getElementById("balls").children);
+let balls = [].slice.call(document.getElementById("balls").children);
 let adder= 0;
 let counter=0;
 let sec = 0;
@@ -63,7 +62,11 @@ addEventListener('resize',()=>{
 })
 document.body.onload=timer
 console.log(keeper)
-
+let bal = document.querySelector("#balls")
+for (var i = bal.children.length; i >= 0; i--) {
+    bal.appendChild(bal.children[Math.random() * i | 0]);
+}
+console.log(bal)
 balls.forEach((ball) => {
     ball.addEventListener("click", () => {
         ball.classList.add("clicked");
@@ -71,6 +74,7 @@ balls.forEach((ball) => {
         if (counter === 0) {
             firstChoice = ball.getAttribute("animal");
             firstindex = balls.indexOf(ball);
+            console.log([].slice.call(ball.classList))
             counter++;
         }
          else {

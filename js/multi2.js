@@ -33,6 +33,12 @@
 				document.getElementById('m-fader').style.display='';
 			}
 		})
+
+		let bal = document.querySelector("#balls")
+		for (var i = bal.children.length; i >= 0; i--) {
+    		bal.appendChild(bal.children[Math.random() * i | 0]);
+		}
+		console.log(bal)
 		
 		document.getElementById('Player1').style.backgroundColor='#FDA214'
 		document.getElementById('Player1').style.color='#Fcfcfc'

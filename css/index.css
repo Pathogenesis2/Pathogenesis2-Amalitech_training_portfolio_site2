@@ -1,0 +1,209 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #304859;
+    font-family: 'Atkinson Hyperlegible', sans-serif;
+}
+#container{
+    background-color: #304859;
+    width: 70%;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+#inv-cnt{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    cursor: pointer;
+}
+#memory{
+    transform: scale(5);
+    position: relative;
+}  
+.game{
+    position: relative;
+    display: inline;
+}
+#Game{
+    position: absolute;
+    margin-top: 0.5vw;
+    margin-left: 45vw;
+    font-size: 5vw;
+}
+#svg{
+    margin-left: -3vw;
+    margin-right: -3vw;
+    color:  #fcf2c9;
+    transition: 2s;
+}
+.fa-gamepad{
+    font-size: 2vw;
+    animation: animate 2s infinite,increase 2s infinite;
+}
+@keyframes increase{
+    0%,50%{
+        font-size: 2vw;
+    }
+   80%{
+    font-size: 5vw
+   }
+   100%{
+    font-size: 2vw;
+   }
+}
+@keyframes animate{
+    50%{
+        transform: rotate(360deg)
+    }
+    80%{
+        transform: rotate(-360deg)
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+#g{
+    transform: rotateX(35deg);
+    color: #ff870f;
+    animation: margi 2s infinite;
+}
+#e{
+    margin-left: -3.5vw;
+    color: #38cbdb;
+    animation: marginal 2s infinite;
+
+}
+
+@keyframes marginal{
+    50%{
+        margin-left: -3.5vw;
+    }
+    80%{
+        margin-left: -1vw
+    }
+    100%{
+        margin-left: -3.5vw
+    }
+}
+@keyframes margi{
+    50%{
+        margin-left: 0vw;
+    }
+    80%{
+        margin-left: -2vw
+    }
+    100%{
+        margin-left: 0vw
+    }
+}
+#m{
+    color:#380b05;
+}
+#g, #e, #m{
+    filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
+}
+#click{
+    position: relative;
+    width: 68%;
+    font-size: 2vw;
+    color: #fcf2c9;
+    text-transform: uppercase;
+    animation: animater 1s linear infinite;
+    margin: auto;
+    top: 10vw
+}
+
+@keyframes animater{
+    0%{
+        transform: scale(0.9);
+    }
+    50%{
+        transform: scale(1.1);
+    }
+    100%{
+        transform: scale(0.9);
+    }
+}
+@media only screen and (max-device-width: 480px) and (min-device-width: 260px){
+    #memory{
+        transform: scale(2);
+        position: relative;
+    }  
+    #Game{
+        margin-top: -1vw;
+        margin-left: 45vw;
+        font-size: 8vw;
+    }
+    .fa-gamepad{
+        font-size: 4vw;
+        animation: animate 2s infinite,increase 2s infinite;
+    }
+    @keyframes increase{
+        0%,50%{
+            font-size: 4vw;
+        }
+        80%{
+            font-size: 8vw
+        }
+        100%{
+            font-size: 4vw;
+        } 
+    }
+    #click{
+        position: relative;
+        top: 15vw;
+        font-size: 6vw;
+        -webkit-text-stroke: 0.1vw #fcf2c9;
+    }
+    #g{
+        margin-right:-2vw
+    }
+    #m{
+        margin-left: -2vw;
+    }
+}
+@media only screen and (max-device-width: 970px) and (min-device-width: 481px){
+    #memory{
+        transform: scale(4);
+        position: relative;
+    }  
+    #Game{
+        margin-top: vw;
+        margin-left: 45vw;
+        font-size: 8vw;
+    }
+    .fa-gamepad{
+        font-size: 4vw;
+        animation: animate 2s infinite,increase 2s infinite;
+    }
+    @keyframes increase{
+        0%,50%{
+            font-size: 4vw;
+        }
+        80%{
+            font-size: 8vw
+        }
+        100%{
+            font-size: 4vw;
+        } 
+    }
+    #click{
+        position: relative;
+        top: 20vw;
+        font-size: 6vw;
+        -webkit-text-stroke: 0.1vw #fcf2c9;
+    }
+    #g{
+        margin-right:-2vw
+    }
+    #m{
+        margin-left: -2vw;
+    }
+}
+    

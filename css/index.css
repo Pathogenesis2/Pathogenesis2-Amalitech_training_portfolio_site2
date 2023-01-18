@@ -1,6 +1,13 @@
 *{
     margin: 0;
-    padding: 0;
+	padding: 0;
+	-webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+	-webkit-tap-highlight-color: transparent;
+    user-select: none;
 }
 body{
     background-color: #304859;
@@ -46,6 +53,32 @@ body{
     font-size: 2vw;
     animation: animate 2s infinite,increase 2s infinite;
 }
+#g{
+    transform: rotateX(35deg);
+    color: #ff870f;
+    animation: margi 2s infinite;
+}
+#e{
+    margin-left: -3.5vw;
+    color: #38cbdb;
+    animation: marginal 2s infinite;
+}
+#m{
+    color:#380b05;
+}
+#g, #e, #m{
+    filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
+}
+#click{
+    position: relative;
+    width: 68%;
+    font-size: 2vw;
+    color: #fcf2c9;
+    text-transform: uppercase;
+    animation: animater 1s linear infinite;
+    margin: auto;
+    top: 10vw
+}
 @keyframes increase{
     0%,50%{
         font-size: 2vw;
@@ -68,18 +101,6 @@ body{
         transform: rotate(360deg);
     }
 }
-#g{
-    transform: rotateX(35deg);
-    color: #ff870f;
-    animation: margi 2s infinite;
-}
-#e{
-    margin-left: -3.5vw;
-    color: #38cbdb;
-    animation: marginal 2s infinite;
-
-}
-
 @keyframes marginal{
     50%{
         margin-left: -3.5vw;
@@ -102,23 +123,6 @@ body{
         margin-left: 0vw
     }
 }
-#m{
-    color:#380b05;
-}
-#g, #e, #m{
-    filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
-}
-#click{
-    position: relative;
-    width: 68%;
-    font-size: 2vw;
-    color: #fcf2c9;
-    text-transform: uppercase;
-    animation: animater 1s linear infinite;
-    margin: auto;
-    top: 10vw
-}
-
 @keyframes animater{
     0%{
         transform: scale(0.9);

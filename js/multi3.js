@@ -14,7 +14,7 @@
 		}
 		
 		const newGame=()=>{
-			location.href='../../index.html'
+			location.href='../../start.html'
 		}
 		
 		const menu=()=>{
@@ -48,96 +48,102 @@
 		
 		balls.forEach((ball) => {
 			ball.addEventListener("click", () => {
-				ball.classList.add("clicked");
-				
 				if (counter === 0) {
 					firstChoice = ball.getAttribute("animal");
 					firstindex = balls.indexOf(ball);
-					counter++;
+					if(![].slice.call(ball.classList).includes('checked')){
+						ball.classList.add("clicked");
+						counter++;
+					}     
+					else{
+						counter=0;
+					}  
 				}
 				else {
-					secondChoice = ball.getAttribute("animal");
-					secondIndex = balls.indexOf(ball);
-					counter = 0;
-					main()
-					
-					if(document.getElementsByClassName('checked').length===document.getElementsByClassName('ball_element').length){
-                        if((score['score2'] < score['score1'] && score['score2'] > score['score3']) || (score['score2'] < score['score1'] && score['score2'] === score['score3'])){
-                            document.querySelector('#box1-pair').innerHTML=score['score1'] + ' Pairs'
-                            document.querySelector('#box2-c').innerHTML='Player 2'
-                            document.querySelector('#box2-pair').innerHTML=score['score2'] + ' Pairs'
-                            document.querySelector('#box3-c').innerHTML='Player 3'
-                            document.querySelector('#box3-pair').innerHTML=score['score3'] + ' Pairs'
-                        }
-                        else if(score['score1'] > score['score3'] && score['score2'] < score['score3']){
-                            document.querySelector('#box1-pair').innerHTML=score['score1'] + ' Pairs'
-                            document.querySelector('#box2-c').innerHTML='Player 3'
-                            document.querySelector('#box2-pair').innerHTML=score['score3'] + ' Pairs'
-                            document.querySelector('#box3-c').innerHTML='Player 2'
-                            document.querySelector('#box3-pair').innerHTML=score['score2'] + ' Pairs'
-                        }
-                        else if((score['score1'] < score['score2'] && score['score1'] > score['score3']) || (score['score1'] < score['score2'] && score['score1'] === score['score3'])){
-                            document.querySelector('#box1-c').innerHTML='Player 2 (Winner!)'
-                            document.querySelector('#box1-pair').innerHTML=score['score2'] + ' Pairs'
-                            document.querySelector('#box2-c').innerHTML='Player 1'
-                            document.querySelector('#box2-pair').innerHTML=score['score1'] + ' Pairs'
-                            document.querySelector('#box3-c').innerHTML='Player 3'
-                            document.querySelector('#box3-pair').innerHTML=score['score3'] + ' Pairs'
-                        }
-                        else if(score['score2'] > score['score3'] && score['score1'] < score['score3']){
-                            document.querySelector('#box1-c').innerHTML='Player 2 (Winner!)'
-                            document.querySelector('#box1-pair').innerHTML=score['score2'] + ' Pairs'
-                            document.querySelector('#box2-c').innerHTML='Player 3'
-                            document.querySelector('#box2-pair').innerHTML=score['score3'] + ' Pairs'
-                            document.querySelector('#box3-c').innerHTML='Player 1'
-                            document.querySelector('#box3-pair').innerHTML=score['score1'] + ' Pairs'
-                        }
-                        else if((score['score1'] < score['score3'] && score['score1'] > score['score2']) || (score['score1'] < score['score3'] && score['score1'] === score['score2'])){
-                            document.querySelector('#box1-c').innerHTML='Player 3 (Winner!)'
-                            document.querySelector('#box1-pair').innerHTML=score['score3'] + ' Pairs'
-                            document.querySelector('#box2-c').innerHTML='Player 1'
-                            document.querySelector('#box2-pair').innerHTML=score['score1'] + ' Pairs'
-                            document.querySelector('#box3-c').innerHTML='Player 2'
-                            document.querySelector('#box3-pair').innerHTML=score['score2'] + ' Pairs'
-                        }
-                        else if(score['score3'] > score['score2'] && score['1'] < score['score2']){
-                            document.querySelector('#box1-c').innerHTML='Player 3 (Winner!)'
-                            document.querySelector('#box1-pair').innerHTML=score['score3'] + ' Pairs'
-                            document.querySelector('#box2-c').innerHTML='Player 2'
-                            document.querySelector('#box2-pair').innerHTML=score['score2'] + ' Pairs'
-                            document.querySelector('#box3-c').innerHTML='Player 1'
-                            document.querySelector('#box3-pair').innerHTML=score['score1'] + ' Pairs'
-                        }
-        
-                        else if(score['score1'] === score['score3'] && score['score1'] > score['score2']){
-                            document.querySelector('#speech').innerHTML='It is a Tie!'
-                            document.querySelector('#box1-c').innerHTML='Player 1'
-                            document.querySelector('#box1-pair').innerHTML=score['score1'] + ' Pairs'
-                            document.querySelector('#box2-c').innerHTML='Player 3'
-                            document.querySelector('#box2-pair').innerHTML=score['score3'] + ' Pairs'
-                            document.querySelector('#box3-c').innerHTML='Player 2'
-                            document.querySelector('#box3-pair').innerHTML=score['score2'] + ' Pairs'
-                        }
-                        else if(score['score2'] === score['score3'] && score['score2'] > score['score1']){
-                            document.querySelector('#speech').innerHTML='There is a Tie!'
-                            document.querySelector('#box1-c').innerHTML='Player 2'
-                            document.querySelector('#box1-pair').innerHTML=score['score2'] + ' Pairs'
-                            document.querySelector('#box2-c').innerHTML='Player 3'
-                            document.querySelector('#box2-pair').innerHTML=score['score3'] + ' Pairs'
-                            document.querySelector('#box3-c').innerHTML='Player 1'
-                            document.querySelector('#box3-pair').innerHTML=score['score1'] + ' Pairs'
-                        }
-                        else{
-                            document.querySelector('#speech').innerHTML='There is a Tie!'
-                            document.querySelector('#box1-c').innerHTML='Player 1'
-                            document.querySelector('#box1-pair').innerHTML=score['score1'] + ' Pairs'
-                            document.querySelector('#box2-c').innerHTML='Player 2'
-                            document.querySelector('#box2-pair').innerHTML=score['score2'] + ' Pairs'
-                            document.querySelector('#box3-c').innerHTML='Player 3'
-                            document.querySelector('#box3-pair').innerHTML=score['score3'] + ' Pairs'
-                        }
-                        document.querySelector('#fader').style.display='block'
-                    }
+					if(![].slice.call(ball.classList).includes('clicked')){
+						ball.classList.add("clicked");
+						secondChoice = ball.getAttribute("animal");
+						secondIndex = balls.indexOf(ball);
+						counter = 0;
+						main()
+						if(document.getElementsByClassName('checked').length===document.getElementsByClassName('ball_element').length){
+							if((score['score2'] < score['score1'] && score['score2'] > score['score3']) || (score['score2'] < score['score1'] && score['score2'] === score['score3'])){
+								document.querySelector('#box1-pair').innerHTML=score['score1'] + ' Pairs'
+								document.querySelector('#box2-c').innerHTML='Player 2'
+								document.querySelector('#box2-pair').innerHTML=score['score2'] + ' Pairs'
+								document.querySelector('#box3-c').innerHTML='Player 3'
+								document.querySelector('#box3-pair').innerHTML=score['score3'] + ' Pairs'
+							}
+							else if(score['score1'] > score['score3'] && score['score2'] < score['score3']){
+								document.querySelector('#box1-pair').innerHTML=score['score1'] + ' Pairs'
+								document.querySelector('#box2-c').innerHTML='Player 3'
+								document.querySelector('#box2-pair').innerHTML=score['score3'] + ' Pairs'
+								document.querySelector('#box3-c').innerHTML='Player 2'
+								document.querySelector('#box3-pair').innerHTML=score['score2'] + ' Pairs'
+							}
+							else if((score['score1'] < score['score2'] && score['score1'] > score['score3']) || (score['score1'] < score['score2'] && score['score1'] === score['score3'])){
+								document.querySelector('#box1-c').innerHTML='Player 2 (Winner!)'
+								document.querySelector('#box1-pair').innerHTML=score['score2'] + ' Pairs'
+								document.querySelector('#box2-c').innerHTML='Player 1'
+								document.querySelector('#box2-pair').innerHTML=score['score1'] + ' Pairs'
+								document.querySelector('#box3-c').innerHTML='Player 3'
+								document.querySelector('#box3-pair').innerHTML=score['score3'] + ' Pairs'
+							}
+							else if(score['score2'] > score['score3'] && score['score1'] < score['score3']){
+								document.querySelector('#box1-c').innerHTML='Player 2 (Winner!)'
+								document.querySelector('#box1-pair').innerHTML=score['score2'] + ' Pairs'
+								document.querySelector('#box2-c').innerHTML='Player 3'
+								document.querySelector('#box2-pair').innerHTML=score['score3'] + ' Pairs'
+								document.querySelector('#box3-c').innerHTML='Player 1'
+								document.querySelector('#box3-pair').innerHTML=score['score1'] + ' Pairs'
+							}
+							else if((score['score1'] < score['score3'] && score['score1'] > score['score2']) || (score['score1'] < score['score3'] && score['score1'] === score['score2'])){
+								document.querySelector('#box1-c').innerHTML='Player 3 (Winner!)'
+								document.querySelector('#box1-pair').innerHTML=score['score3'] + ' Pairs'
+								document.querySelector('#box2-c').innerHTML='Player 1'
+								document.querySelector('#box2-pair').innerHTML=score['score1'] + ' Pairs'
+								document.querySelector('#box3-c').innerHTML='Player 2'
+								document.querySelector('#box3-pair').innerHTML=score['score2'] + ' Pairs'
+							}
+							else if(score['score3'] > score['score2'] && score['1'] < score['score2']){
+								document.querySelector('#box1-c').innerHTML='Player 3 (Winner!)'
+								document.querySelector('#box1-pair').innerHTML=score['score3'] + ' Pairs'
+								document.querySelector('#box2-c').innerHTML='Player 2'
+								document.querySelector('#box2-pair').innerHTML=score['score2'] + ' Pairs'
+								document.querySelector('#box3-c').innerHTML='Player 1'
+								document.querySelector('#box3-pair').innerHTML=score['score1'] + ' Pairs'
+							}
+			
+							else if(score['score1'] === score['score3'] && score['score1'] > score['score2']){
+								document.querySelector('#speech').innerHTML='It is a Tie!'
+								document.querySelector('#box1-c').innerHTML='Player 1'
+								document.querySelector('#box1-pair').innerHTML=score['score1'] + ' Pairs'
+								document.querySelector('#box2-c').innerHTML='Player 3'
+								document.querySelector('#box2-pair').innerHTML=score['score3'] + ' Pairs'
+								document.querySelector('#box3-c').innerHTML='Player 2'
+								document.querySelector('#box3-pair').innerHTML=score['score2'] + ' Pairs'
+							}
+							else if(score['score2'] === score['score3'] && score['score2'] > score['score1']){
+								document.querySelector('#speech').innerHTML='There is a Tie!'
+								document.querySelector('#box1-c').innerHTML='Player 2'
+								document.querySelector('#box1-pair').innerHTML=score['score2'] + ' Pairs'
+								document.querySelector('#box2-c').innerHTML='Player 3'
+								document.querySelector('#box2-pair').innerHTML=score['score3'] + ' Pairs'
+								document.querySelector('#box3-c').innerHTML='Player 1'
+								document.querySelector('#box3-pair').innerHTML=score['score1'] + ' Pairs'
+							}
+							else{
+								document.querySelector('#speech').innerHTML='There is a Tie!'
+								document.querySelector('#box1-c').innerHTML='Player 1'
+								document.querySelector('#box1-pair').innerHTML=score['score1'] + ' Pairs'
+								document.querySelector('#box2-c').innerHTML='Player 2'
+								document.querySelector('#box2-pair').innerHTML=score['score2'] + ' Pairs'
+								document.querySelector('#box3-c').innerHTML='Player 3'
+								document.querySelector('#box3-pair').innerHTML=score['score3'] + ' Pairs'
+							}
+							document.querySelector('#fader').style.display='block'
+						}
+					}
 				}
 				
 			});

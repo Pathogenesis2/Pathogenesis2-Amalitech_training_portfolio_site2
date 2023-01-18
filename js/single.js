@@ -40,7 +40,7 @@ const restart =()=>{
 }
 
 const newGame=()=>{
-    location.href='../../index.html'
+    location.href='../../start.html'
 }
 
 const menu=()=>{
@@ -69,55 +69,64 @@ for (var i = bal.children.length; i >= 0; i--) {
 console.log(bal)
 balls.forEach((ball) => {
     ball.addEventListener("click", () => {
-        ball.classList.add("clicked");
+        console.log( [].slice.call(ball.classList))
 
         if (counter === 0) {
             firstChoice = ball.getAttribute("animal");
             firstindex = balls.indexOf(ball);
-            console.log([].slice.call(ball.classList))
-            counter++;
+            if(![].slice.call(ball.classList).includes('checked')){
+                ball.classList.add("clicked");
+                counter++;
+            }     
+            else{
+                counter=0;
+            }  
         }
          else {
-            secondChoice = ball.getAttribute("animal");
-            secondIndex = balls.indexOf(ball);
-            counter = 0;
-            if (firstChoice === secondChoice && firstindex !== secondIndex) {
-                const correctCards = document.querySelectorAll(
-                ".ball_element[animal='" + firstChoice + "']"
-                );
+            if(![].slice.call(ball.classList).includes('clicked')){
+                ball.classList.add("clicked");
+                secondChoice = ball.getAttribute("animal");
+                secondIndex = balls.indexOf(ball);
+                counter = 0;
+                if (firstChoice === secondChoice && firstindex !== secondIndex) {
+                    const correctCards = document.querySelectorAll(
+                    ".ball_element[animal='" + firstChoice + "']"
+                    );
 
-                correctCards[0].classList.add("checked");
-                correctCards[0].classList.remove("clicked");
-                correctCards[1].classList.add("checked");
-                correctCards[1].classList.remove("clicked");
-                adder++
-                }else if (firstChoice === secondChoice && firstindex === secondIndex) {
-                const correctCards = document.querySelectorAll(
-                ".ball_element[animal='" + firstChoice + "']"
-                );
+                    correctCards[0].classList.add("checked");
+                    correctCards[0].classList.remove("clicked");
+                    correctCards[1].classList.add("checked");
+                    correctCards[1].classList.remove("clicked");
+                    adder++
+                    }else if (firstChoice === secondChoice && firstindex === secondIndex) {
+                    const correctCards = document.querySelectorAll(
+                    ".ball_element[animal='" + firstChoice + "']"
+                    );
 
-                correctCards[0].classList.remove("clicked");
-                correctCards[1].classList.remove("clicked");} else {
-                const incorrectCards = document.querySelectorAll(".clicked");
-                incorrectCards[0].classList.add("missed");
-                incorrectCards[1].classList.add("missed");
+                    correctCards[0].classList.remove("clicked");
+                    correctCards[1].classList.remove("clicked");} 
+                    else {
+                    const incorrectCards = document.querySelectorAll(".clicked");
+                    incorrectCards[0].classList.add("missed");
+                    incorrectCards[1].classList.add("missed");
 
-                setTimeout(() => {
-                incorrectCards[0].classList.remove("missed");
-                incorrectCards[0].classList.remove("clicked");
-                incorrectCards[1].classList.remove("missed");
-                incorrectCards[1].classList.remove("clicked");
-                }, 800);
-                adder++
-                
-            }if(document.getElementsByClassName('checked').length===document.getElementsByClassName('ball_element').length){
-                console.log(true)
-                console.log(move['mv'])
-                console.log([holder['min'], holder['sec']])
-                document.querySelector('#min').innerHTML=holder['min']+':'+holder['sec'];
-                document.querySelector('#mov').innerHTML=move['mv']+1+' '+ 'moves';
-                clearInterval(timer)
-                document.querySelector('#fader').style.display='block'
+                    setTimeout(() => {
+                    incorrectCards[0].classList.remove("missed");
+                    incorrectCards[0].classList.remove("clicked");
+                    incorrectCards[1].classList.remove("missed");
+                    incorrectCards[1].classList.remove("clicked");
+                    }, 800);
+                    adder++
+                    
+                }if(document.getElementsByClassName('checked').length===document.getElementsByClassName('ball_element').length){
+                    console.log(true)
+                    console.log(move['mv'])
+                    console.log([holder['min'], holder['sec']])
+                    document.querySelector('#min').innerHTML=holder['min']+':'+holder['sec'];
+                    document.querySelector('#mov').innerHTML=move['mv']+1+' '+ 'moves';
+                    clearInterval(timer)
+                    document.querySelector('#fader').style.display='block'
+                }
             }
         
         move['mv']=adder;

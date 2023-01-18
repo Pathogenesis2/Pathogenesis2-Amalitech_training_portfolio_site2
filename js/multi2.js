@@ -14,7 +14,7 @@
 		}
 		
 		const newGame=()=>{
-			location.href='../../index.html'
+			location.href='../../start.html'
 		}
 		
 		const menu=()=>{
@@ -46,41 +46,50 @@
 		
 		balls.forEach((ball) => {
 			ball.addEventListener("click", () => {
-				ball.classList.add("clicked");
+
 				
 				if (counter === 0) {
 					firstChoice = ball.getAttribute("animal");
 					firstindex = balls.indexOf(ball);
-					counter++;
+					if(![].slice.call(ball.classList).includes('checked')){
+						ball.classList.add("clicked");
+						counter++;
+					}     
+					else{
+						counter=0;
+					}  
 				}
 				else {
-					secondChoice = ball.getAttribute("animal");
-					secondIndex = balls.indexOf(ball);
-					counter = 0;
-					main()
-					
-					if(document.getElementsByClassName('checked').length===document.getElementsByClassName('ball_element').length){
-						if(score['score1']>score['score2']){
-							document.getElementById('box1-c').innerHTML='Player 1 (Winner!)'
-							document.getElementById("box1-pair").innerHTML=score['score1']+ ' Pairs '
-							document.getElementById('box2-c').innerHTML='Player 2'
-							document.getElementById("box2-pair").innerHTML=score['score2']+ ' Pairs'
-							document.getElementById('speech').innerHTML='We have a winner!'
+					if(![].slice.call(ball.classList).includes('clicked')){
+						ball.classList.add("clicked");
+						secondChoice = ball.getAttribute("animal");
+						secondIndex = balls.indexOf(ball);
+						counter = 0;
+						main()
+						
+						if(document.getElementsByClassName('checked').length===document.getElementsByClassName('ball_element').length){
+							if(score['score1']>score['score2']){
+								document.getElementById('box1-c').innerHTML='Player 1 (Winner!)'
+								document.getElementById("box1-pair").innerHTML=score['score1']+ ' Pairs '
+								document.getElementById('box2-c').innerHTML='Player 2'
+								document.getElementById("box2-pair").innerHTML=score['score2']+ ' Pairs'
+								document.getElementById('speech').innerHTML='We have a winner!'
+							}
+							else if(score['score1']<score['score2']){
+								document.getElementById('box1-c').innerHTML='Player 2 (Winner!)'
+								document.getElementById("box1-pair").innerHTML=score['score2']+ ' Pairs'
+								document.getElementById('box2-c').innerHTML='Player 1'
+								document.getElementById("box2-pair").innerHTML=score['score1']+ ' Pairs'
+								document.getElementById('speech').innerHTML='We have a winner'
+							}
+							else{
+								document.getElementById('box1-c').innerHTML='Player 1'
+								document.getElementById("box1-pair").innerHTML=score['score1']+ ' Pairs'
+								document.getElementById('box2-c').innerHTML='Player 2'
+								document.getElementById("box2-pair").innerHTML=score['score2']+ ' Pairs'
+							}
+							document.querySelector('#fader').style.display='block'
 						}
-						else if(score['score1']<score['score2']){
-							document.getElementById('box1-c').innerHTML='Player 2 (Winner!)'
-							document.getElementById("box1-pair").innerHTML=score['score2']+ ' Pairs'
-							document.getElementById('box2-c').innerHTML='Player 1'
-							document.getElementById("box2-pair").innerHTML=score['score1']+ ' Pairs'
-							document.getElementById('speech').innerHTML='We have a winner'
-						}
-						else{
-							document.getElementById('box1-c').innerHTML='Player 1'
-							document.getElementById("box1-pair").innerHTML=score['score1']+ ' Pairs'
-							document.getElementById('box2-c').innerHTML='Player 2'
-							document.getElementById("box2-pair").innerHTML=score['score2']+ ' Pairs'
-						}
-						document.querySelector('#fader').style.display='block'
 					}
 				}
 				

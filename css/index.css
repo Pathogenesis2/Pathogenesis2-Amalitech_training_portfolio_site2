@@ -38,22 +38,23 @@ body{
     display: inline;
 }
 #Game{
+    display: grid;
+    grid-template-columns: auto auto auto 25%;
     position: absolute;
-    margin-top: 0.5vw;
-    margin-left: 45vw;
+    margin-top: 2vw;
+    margin-left: 38vw;
     font-size: 5vw;
 }
 #svg{
-    margin-left: -3vw;
-    margin-right: -3vw;
-    color:  #fcf2c9;
+    fill:  #fcf2c9;
     transition: 2s;
+    display: flex;
 }
-.fa-gamepad{
-    font-size: 2vw;
+#svg svg{
     animation: animate 2s infinite,increase 2s infinite;
 }
 #g{
+    margin-right: -1vw;
     transform: rotateX(35deg);
     color: #ff870f;
     animation: margi 2s infinite;
@@ -64,6 +65,7 @@ body{
     animation: marginal 2s infinite;
 }
 #m{
+    margin-left: -1vw;
     color:#380b05;
 }
 #g, #e, #m{
@@ -81,13 +83,16 @@ body{
 }
 @keyframes increase{
     0%,50%{
-        font-size: 2vw;
+        width: 30px;
+        height: auto;
     }
    80%{
-    font-size: 5vw
+        width: 110px;
+        height: auto;
    }
    100%{
-    font-size: 2vw;
+        width: 30px;
+        height: auto;
    }
 }
 @keyframes animate{
@@ -141,23 +146,26 @@ body{
     }  
     #Game{
         margin-top: -1vw;
-        margin-left: 45vw;
+        margin-left: 40vw;
         font-size: 8vw;
     }
-    .fa-gamepad{
+    #svg svg{
         font-size: 4vw;
         animation: animate 2s infinite,increase 2s infinite;
     }
     @keyframes increase{
         0%,50%{
-            font-size: 4vw;
+            width: 12px;
+            height: auto;
         }
-        80%{
-            font-size: 8vw
-        }
-        100%{
-            font-size: 4vw;
-        } 
+       80%{
+            width: 50px;
+            height: auto;
+       }
+       100%{
+            width: 12px;
+            height: auto;
+       }
     }
     #click{
         position: relative;
@@ -178,24 +186,8 @@ body{
         position: relative;
     }  
     #Game{
-        margin-top: vw;
-        margin-left: 45vw;
+        margin-left: 32vw;
         font-size: 8vw;
-    }
-    .fa-gamepad{
-        font-size: 4vw;
-        animation: animate 2s infinite,increase 2s infinite;
-    }
-    @keyframes increase{
-        0%,50%{
-            font-size: 4vw;
-        }
-        80%{
-            font-size: 8vw
-        }
-        100%{
-            font-size: 4vw;
-        } 
     }
     #click{
         position: relative;
@@ -203,11 +195,19 @@ body{
         font-size: 6vw;
         -webkit-text-stroke: 0.1vw #fcf2c9;
     }
-    #g{
-        margin-right:-2vw
-    }
-    #m{
-        margin-left: -2vw;
+    @keyframes increase{
+        0%,50%{
+            width: 30px;
+            height: auto;
+        }
+       80%{
+            width: 110px;
+            height: auto;
+       }
+       100%{
+            width: 30px;
+            height: auto;
+       }
     }
 }
     

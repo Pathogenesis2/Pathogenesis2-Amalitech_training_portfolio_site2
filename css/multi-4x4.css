@@ -184,6 +184,9 @@ nav{
 }
 #but1:hover{
 	background-color: #FFB84A;
+	transition: 100ms;
+	transform: scale(1.1);
+	box-shadow: 0px 0px 2px 0.05px grey
 }
 #but2{
 	width: 10.4vw;
@@ -198,7 +201,10 @@ nav{
 }
 #but2:hover{
 	background-color: #6395B8;
-	color: #fcfcfc
+	color: #fcfcfc;
+	transition: 100ms;
+	transform: scale(1.1);
+	box-shadow: 0px 0px 2px 0.05px grey
 }
 #but1 h3, #but2 h3{
 	margin: auto auto;
@@ -300,8 +306,10 @@ svg{
 }
 .clicked{
 	background-color: #FDA214;
+	animation: reduce 1 10ms;
+	animation-fill-mode: forwards;
 }
-.click:hover{
+.clicked:hover{
 	background-color: #FDA214;;
 }
 .clicked svg, .clicked span{
@@ -309,6 +317,8 @@ svg{
 }
 .checked{
 	background-color: #BCCED9;
+	animation: reducer 1 10ms;
+	animation-fill-mode: forwards
 }
 .checked svg, .checked span{
 	display: inline;
@@ -332,9 +342,21 @@ svg{
 	text-align: center;
 	visibility: visible;
 }
-.ball_element_in{
-	transform: scale(1.8);
-	box-shadow: 1px 2px 2px grey;
+.options:hover{
+	transition: 100ms;
+	transform: scale(1.1);
+	box-shadow: 0px 0px 2px 0.05px grey
+}
+@keyframes reduce{
+	100%{
+		transform: scale(0.8);
+		box-shadow: 0px 0px 2px 0.05px grey
+	}
+}
+@keyframes reducer{
+	100%{
+		transform: scale(0.8);
+	}
 }
 
 @media only screen and (max-device-width: 480px) and (min-device-width: 260px){
@@ -358,7 +380,6 @@ svg{
 	#menu{
 		width: 16.3vw;
 		height: 8.3vw;
-		display: inline;
 		background-color: #FDA214;
 		color: #FCFCFC;
 		text-align: center;
@@ -367,6 +388,22 @@ svg{
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
+	}
+	#menu:hover{
+		background-color: #FFB84A;
+		color: #fcfcfc;
+		transition: 100ms;
+		transform: scale(1.1);
+		box-shadow: 0px 0px 2px 0.05px grey
+	}
+	#menu h3{
+		display: inline;
+		position: relative;
+		top: 0%;
+		left: 0%;
+		transform: translate(0%,13%);
+		width: 100%;
+		height: 100%;
 	}
 	#but1, #but2{
 		display: none
@@ -494,10 +531,17 @@ svg{
 		border-radius: 6vw;
 		width: 100%;
 		height: 10.6vw;
+		display:flex;
+		flex-direction: column;
+		justify-content: center;
 	}
 	.options div{
-		top: 20%;
-		font-size: 4vw;
+		top: 0;
+		bottom: 0px;
+	}
+	.options:hover{
+		transform: scale(1.1);
+		box-shadow: 0px 0px 2px 0.05px grey;
 	}
 	#restart{
 		background-color: #FDA214;
@@ -532,6 +576,7 @@ svg{
 	}
 	#menu:hover{
 		background-color: #FFB84A;
+		
 	}
 	#menu-fade{
 		width: 87.2vw;

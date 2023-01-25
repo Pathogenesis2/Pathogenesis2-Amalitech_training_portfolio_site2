@@ -543,12 +543,12 @@ svg{
 		background-color: #FDA214;
 		float: left;
 		color: #FCFCFC;
-		font-size: 1vw;
+		font-size: 3vw;
 	}
 	#setup{
 		background-color:  #DFE7EC;
 		float: right;
-		font-size: 1vw;
+		font-size: 3vw;
 		color: #152938;
 		margin-top: 4vw
 	}
